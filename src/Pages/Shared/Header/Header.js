@@ -1,20 +1,30 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../images/logo/logo.png";
 
 const Header = () => {
   return (
-    <>
+    <div className="bg-transparent">
       <Navbar
         bg="light"
         variant="light"
         sticky="top"
         collapseOnSelect
         expand="md"
+        style={{
+          height: "100%",
+          borderBottom: "5px solid #91ce6b",
+        }}
       >
         <Container>
-          <img src={logo} alt="" height="50vh" />
+          <img
+            className="rounded-3"
+            src={logo}
+            alt=""
+            width="150vh"
+            height="70vh"
+          />
           {/* <Navbar.Brand href="#home">Navbar</Navbar.Brand> */}
           <Navbar.Toggle />
           <Navbar.Collapse
@@ -25,7 +35,7 @@ const Header = () => {
               activeStyle={{
                 color: "#252625",
                 padding: "5px",
-                border: "2px solid #91ce6b ",
+                borderBottom: "2px solid #91ce6bBottom",
                 borderRadius: "10px",
               }}
               className="text-decoration-none"
@@ -37,7 +47,7 @@ const Header = () => {
               activeStyle={{
                 color: "#252625",
                 padding: "5px",
-                border: "2px solid #91ce6b ",
+                borderBottom: "2px solid #91ce6b ",
                 borderRadius: "10px",
               }}
               className="mx-3 text-decoration-none"
@@ -49,7 +59,7 @@ const Header = () => {
               activeStyle={{
                 color: "#252625",
                 padding: "5px",
-                border: "2px solid #91ce6b ",
+                borderBottom: "2px solid #91ce6b ",
                 borderRadius: "10px",
               }}
               className="text-decoration-none"
@@ -61,7 +71,7 @@ const Header = () => {
               activeStyle={{
                 color: "#252625",
                 padding: "5px",
-                border: "2px solid #91ce6b ",
+                borderBottom: "2px solid #91ce6b ",
                 borderRadius: "10px",
               }}
               className="ms-3 text-decoration-none"
@@ -75,7 +85,7 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </>
+    </div>
   );
 };
 

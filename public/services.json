@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "State-of-the-Art Equipment",
+    "description": "Each Powerhouse facility offers high quality cardio & strength equipment. When picking the best equipment for newbies you should first ask what their goals might be, in the same way that you might do with seniors. A person wanting to join the gym might aim to lose weight or maintain a healthy physical appearance, which means they’re more likely to engage in cardio. Someone older might aim to undertake exercises that will help them maintain muscle mass and a healthy heart. They are also likely to use equipment that is kinder on their joints.",
+    "image": "https://powerhousegym.com/wp-content/uploads/2021/03/01-state-of-the-art-equipment.png"
+  },
+  {
+    "id": "2",
+    "title": "Group Classes",
+    "description": "The term group fitness encompasses any and all form of fitness that's done in a group setting, lead by a personal trainer or group instructor. With this form of exercise growing in popularity, you can now find group fitness classes of nearly any kind, both aerobic- and strength-based.",
+    "image": "https://powerhousegym.com/wp-content/uploads/2021/03/02-group-classes.png"
+  },
+  {
+    "id": "3",
+    "title": "Personal Trainers",
+    "description": "Personal trainers are responsible for educating clients and enforcing policies regarding safe and proper use of equipment. Individuals holding this position must be able to develop, document, and implement one-on-one, partner, or group workout programs that match the needs and goals of clients.",
+    "image": "https://powerhousegym.com/wp-content/uploads/2021/03/03-personal-trainers.png"
+  },
+  {
+    "id": "4",
+    "title": "Body Combat",
+    "description": "BodyCombat is the empowering cardio workout where you are totally unleashed. This fiercely energetic program is inspired by mixed martial arts and draws from a wide array of disciplines such as karate, boxing, taekwondo, tai chi and muay thai. Benefits of BodyAttack enefits:Gets you fighting fit and looking rippedImproves heart and lung function and reduces the risk of heart diseaseTones and shapes key muscle groupsMaximizes calorie burn during and after your workoutDevelops co-ordination and agility of a mized martial arts warriorTeaches you the moves of an elite martial arts expertImproves bone densityImproves posture, core strength and stabilityBuilds self-confidence, strength and power Keep pushing your limits with quarterly new releases",
+    "image": "http://fitness.skat.tf/wp-content/uploads/sites/8/2014/04/photodune-6776118-gym-girl-s-770x400.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Yoga Fitness",
+    "description": "While its origins stem from ancient India, yoga fitness has become widely popular all over the world for its ability to heal and bring peace of mind while building strength and toning muscles. Our experienced yoga instructors will take you through a series of stretches, positions and routines that will help you regulate and control your breathing.",
+    "image": "http://fitness.skat.tf/wp-content/uploads/sites/8/2014/04/yoga-small-770x400.jpg"
+  },
+  {
+    "id": "6",
+    "title": "Zumba Fitness",
+    "description": "This is the activity that everyone’s been talking about. Fun, hypnotic and easy-to-follow, Zumba classes are the fun way to get your body moving, burn fat and invigorate your energy levels.Set to hypnotic Latin dance rhythms, these easy-to-follow routines feel more like a fun night out than a workout class. The classes integrate fast and slow rhythms that have been designed to tone your body while burning fat.",
+    "image": "https://virtuagym.b-cdn.net/wp-content/uploads/2019/12/working-out-in-a-gym-red-leggings-arms-workout--1024x751.jpg"
+  }
+]

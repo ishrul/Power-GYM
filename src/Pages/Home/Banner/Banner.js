@@ -17,8 +17,11 @@ const Banner = () => {
             height="380vh"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Free Guest Pass</h3>
+            <p>
+              Come in and check us out with a free 1 day gym pass for you or
+              your family
+            </p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -30,8 +33,11 @@ const Banner = () => {
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>Class Timetable</h3>
+            <p>
+              From Yoga to BodyAttack, check out one of our classes on this
+              week.
+            </p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -43,9 +49,10 @@ const Banner = () => {
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            <h3>We're Changing</h3>
             <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+              Because better clubs means a better experience for you. Give us
+              your feedback.
             </p>
           </Carousel.Caption>
         </Carousel.Item>

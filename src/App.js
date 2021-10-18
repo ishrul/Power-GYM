@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Pages/Home/Home/Home";
 import Header from "./Pages/Shared/Header/Header";
-import Banner from "./Pages/Home/Banner/Banner";
+import TrainersPage from "./Pages/TrainersPage/TrainersPage";
+import Footer from "./Pages/Shared/Footer/Footer";
+import Registration from "./Pages/Registration/Registration";
+import Login from "./Pages/Login/Login";
 
 function App() {
   return (
@@ -14,13 +17,20 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route exact path="/home">
+          <Route path="/home">
             <Home></Home>
           </Route>
-          <Route exact path="/trainers">
-            <Home></Home>
+          <Route path="/trainers">
+            <TrainersPage></TrainersPage>
+          </Route>
+          <Route path="/registration">
+            <Registration></Registration>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
           </Route>
         </Switch>
+        <Footer></Footer>
       </Router>
     </div>
   );
