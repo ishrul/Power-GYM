@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { Google } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
-import useFirebase from "../../Hooks/useFirebase";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
+import useAuth from "../../Hooks/useAuth";
 
 const Registration = () => {
   const [email, setEmail] = useState("");
@@ -63,7 +63,7 @@ const Registration = () => {
     setName(e.target.value);
   };
 
-  const { logInWithGoogle } = useFirebase();
+  const { logInWithGoogle } = useAuth();
   return (
     <div>
       <Form onSubmit={handleRegistration} className="login my-5">

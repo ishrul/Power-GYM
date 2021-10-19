@@ -20,7 +20,10 @@ const Service = ({ service }) => {
             <h3>{title}</h3>
             <p>{description.slice(0, 50)} ...</p>
             <button>
-              <Link className="text-decoration-none text-light" to="/">
+              <Link
+                to={`/service/${id}`}
+                className="text-decoration-none text-light"
+              >
                 Read More
               </Link>
             </button>

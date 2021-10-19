@@ -3,8 +3,8 @@ import "./Login.css";
 import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Google } from "react-bootstrap-icons";
-import useFirebase from "../../Hooks/useFirebase";
 import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
+import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -13,7 +13,7 @@ const Login = () => {
 
   const auth = getAuth();
 
-  const { logInWithGoogle } = useFirebase();
+  const { logInWithGoogle } = useAuth();
 
   const handleLogin = (e) => {
     e.preventDefault();
