@@ -62,6 +62,18 @@ const Header = () => {
               borderBottom: "2px solid #91ce6b ",
               borderRadius: "10px",
             }}
+            className="mx-3 text-decoration-none"
+            to="/location"
+          >
+            Our Location
+          </NavLink>
+          <NavLink
+            activeStyle={{
+              color: "#252625",
+              padding: "5px",
+              borderBottom: "2px solid #91ce6b ",
+              borderRadius: "10px",
+            }}
             className="text-decoration-none"
             to="/about"
           >
@@ -97,7 +109,9 @@ const Header = () => {
           )}
           {user.displayName && (
             <Navbar.Text className="ms-2">
-              Signed in as: <Link to="/login">{user.displayName}</Link>
+              <Link className="ms-1 text-decoration-none" to="/login">
+                {user.displayName}
+              </Link>
             </Navbar.Text>
           )}
         </Navbar.Collapse>
