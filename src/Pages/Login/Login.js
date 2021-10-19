@@ -1,24 +1,38 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import "./Login.css";
 import { Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import { Google } from "react-bootstrap-icons";
 import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
 import useAuth from "../../Hooks/useAuth";
+import Header from "../Shared/Header/Header";
+import Footer from "../Shared/Footer/Footer";
 
 const Login = () => {
+  const { logInWithGoogle } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [user, setUser] = useState({});
   const [error, setError] = useState("");
 
-  const auth = getAuth();
+  const location = useLocation();
+  const history = useHistory();
 
-  const { logInWithGoogle } = useAuth();
+  const redirect_uri = location.state?.from || "/home";
+
+  const handleGoogleLogIn = () => {
+    logInWithGoogle().then((result) => {
+      history.push(redirect_uri);
+    });
+  };
+
+  const auth = getAuth();
 
   const handleLogin = (e) => {
     e.preventDefault();
     if (password.length < 6) {
-      setError("Password Must be at least 6 charecter long");
+      setError("          Password Must be at least 6 charecter long");
       return;
     }
     processLogin(email, password);
@@ -29,6 +43,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         console.log(result.user);
+        setUser(result.user);
         setError("");
       })
       .catch((error) => {
@@ -46,6 +61,7 @@ const Login = () => {
 
   return (
     <div>
+      <Header loginUser={user ? user : ""}></Header>
       <Form onSubmit={handleLogin} className="login my-5">
         <h3>Please Login</h3>
         <input
@@ -60,22 +76,23 @@ const Login = () => {
           placeholder="Enter Your Password"
         />
         <br />
+        <p className="text-danger">{error.slice(10, 100)}</p>
         <p>
           New in Power GYM? <Link to="/registration">Registration</Link>{" "}
         </p>
-        <p>{error}</p>
         <input className="submit-button" type="submit" value="Submit" />
       </Form>
       <br />
       <div className="col item social mb-5">
         <a
-          onClick={logInWithGoogle}
-          className="p-1 fs-5 rounded border border-2 border-success text-decoration-none "
+          onClick={handleGoogleLogIn}
+          className="p-1 fs-5 rounded border border-2 border-success text-decoration-none cursor"
         >
-          <Google className="me-2"></Google>
+          <Google className="me-2 "></Google>
           sign in with google
         </a>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

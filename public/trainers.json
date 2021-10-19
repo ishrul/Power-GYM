@@ -22,5 +22,17 @@
     "description": "John has worked in the fitness industry for over 5 year",
     "age": "36",
     "image": "https://i.ibb.co/t45dR4r/photodune-2361203-wellbuilt-guy-s-316x220.jpg"
+  },
+  {
+    "name": "Jhon Wick",
+    "description": "Jhon Wick is our one of the best trainer. He is also an olympic champion.",
+    "age": "41",
+    "image": "https://www.texasfamilyfitness.com/hs-fs/hubfs/personal%20trainer%20featured.jpg?width=600&name=personal%20trainer%20featured.jpg"
+  },
+  {
+    "name": "Rock Gill",
+    "description": "Rock Gill is also an olympic champion. And also he is the Master of all trainer",
+    "age": "51",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLZ8vS_RdDpw_wRb0vCp_rdo2QWY1yloXFaQ&usqp=CAU"
   }
 ]

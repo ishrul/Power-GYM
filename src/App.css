@@ -2,3 +2,6 @@
   text-align: center;
   background-color: white !important;
 }
+.cursor {
+  cursor: pointer;
+}

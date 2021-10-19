@@ -1,5 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import Footer from "../Shared/Footer/Footer";
+import Header from "../Shared/Header/Header";
 import Trainer from "../Trainer/Trainer";
 
 const TrainersPage = () => {
@@ -12,6 +14,7 @@ const TrainersPage = () => {
   }, []);
   return (
     <div>
+      <Header />
       <h2
         style={{
           color: "#91ce6b",
@@ -28,6 +31,7 @@ const TrainersPage = () => {
           <Trainer key={trainer.name} trainer={trainer}></Trainer>
         ))}
       </div>
+      <Footer></Footer>
     </div>
   );
 };
