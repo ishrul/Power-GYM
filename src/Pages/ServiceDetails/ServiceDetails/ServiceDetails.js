@@ -13,6 +13,7 @@ import Header from "../../Shared/Header/Header";
 import Footer from "../../Shared/Footer/Footer";
 
 const ServiceDetails = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
   const [services, setServices] = useState([]);
   const { serviceId } = useParams();
 

@@ -3,6 +3,7 @@ import Footer from "../Shared/Footer/Footer";
 import Header from "../Shared/Header/Header";
 
 const About = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <div>
       <Header />

@@ -5,6 +5,7 @@ import Header from "../Shared/Header/Header";
 import Trainer from "../Trainer/Trainer";
 
 const TrainersPage = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
   const [trainers, setTrainers] = useState([]);
 
   useEffect(() => {

@@ -10,6 +10,7 @@ import Header from "../Shared/Header/Header";
 import Footer from "../Shared/Footer/Footer";
 
 const Login = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
   const { logInWithGoogle } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

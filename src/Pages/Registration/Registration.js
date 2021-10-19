@@ -13,6 +13,7 @@ import Header from "../Shared/Header/Header";
 import Footer from "../Shared/Footer/Footer";
 
 const Registration = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
