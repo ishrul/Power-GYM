@@ -9,3 +9,4 @@ In the Website, you can run:
 - You can also know about our service details.
 - You can see our trainers.
 - You can also log in or log out in this website.
+- You can also log in by (Email: qqqqqq@gmail.com Password: qqqqqq) by this email or password or you can also create an account.

@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import { Form } from "react-bootstrap";
 import { Google } from "react-bootstrap-icons";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -14,15 +14,21 @@ import Footer from "../Shared/Footer/Footer";
 
 const Registration = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
+
+  const { logInWithGoogle } = useAuth();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
 
-  const auth = getAuth();
-
+  const location = useLocation();
   const history = useHistory();
+
+  const redirect_uri = location.state?.from || "/home";
+
+  const auth = getAuth();
 
   const handleRegistration = (e) => {
     e.preventDefault();
@@ -31,7 +37,6 @@ const Registration = () => {
       return;
     }
     createNewUser(email, password);
-    history.push("/home");
   };
   //   create user start
   const createNewUser = (email, password) => {
@@ -40,6 +45,7 @@ const Registration = () => {
         setUserName();
         setError("");
         setUser(result.user);
+        history.push(redirect_uri);
       })
       .catch((error) => {
         setError(error.message);
@@ -73,7 +79,7 @@ const Registration = () => {
     setName(e.target.value);
   };
 
-  const { logInWithGoogle } = useAuth();
+  // const { logInWithGoogle } = useAuth();
 
   return (
     <div>

@@ -43,9 +43,9 @@ const Login = () => {
   const processLogin = (email, password) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        console.log(result.user);
         setUser(result.user);
         setError("");
+        history.push(redirect_uri);
       })
       .catch((error) => {
         setError(error.message);
